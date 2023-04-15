@@ -10,5 +10,7 @@
     ],
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.project.sourcePaths": []
+    "java.project.sourcePaths": [
+        "poker-challenge-mvn/src/main/java/com/argades/poker/pokerchallenge"
+    ]
 }
