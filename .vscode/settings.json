@@ -13,14 +13,14 @@
     "java.project.sourcePaths": [
         "poker-challenge-mvn/src/main/java/com/argades/poker/pokerchallenge"
     ],
-    "editor.fontFamily": "'GoMono NF'",
+    "editor.fontFamily": "GoMono NF",
     "editor.fontSize": 14,
-    "editor.codeLensFontFamily": "'GoMono NF'",
-    "editor.inlayHints.fontFamily": "'GoMono NF'",
-    "debug.console.fontFamily": "'GoMono NF', default",
-    "scm.inputFontFamily": "'GoMono NF', default",
-    "notebook.output.fontFamily": "'GoMono NF'",
-    "terminal.integrated.fontFamily": "'GoMono NF'",
-    "errorLens.fontFamily": "'GoMono NF'",
-    "interactiveSession.editor.fontFamily": "'GoMono NF', default"
+    "editor.codeLensFontFamily": "GoMono NF",
+    "editor.inlayHints.fontFamily": "GoMono NF",
+    "debug.console.fontFamily": "GoMono NF, default",
+    "scm.inputFontFamily": "GoMono NF, default",
+    "notebook.output.fontFamily": "GoMono NF",
+    "terminal.integrated.fontFamily": "GoMono NF",
+    "errorLens.fontFamily": "GoMono NF",
+    "interactiveSession.editor.fontFamily": "GoMono NF, default"
 }
