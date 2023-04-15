@@ -1,0 +1,122 @@
+openapi: '3.1.0'
+info:
+  title: Poker planning Session API
+  summary: API in order to resolve poker challenge.
+  description: API to resolve challenge Poker session.
+                This example apply Clean Architecture and best practice.
+  contact:
+    name: Marco Aurelio Osorio De León
+    url: https://www.linkedin.com/in/marco-aurelio-osorio-de-le%C3%B3n-3b5a189/
+    email: osoriodeleon@gmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  version: '0.0.1'
+servers:
+  - url: http://poker-challenge/api/v1
+    description: Development server
+
+paths:
+  /poker-sessions:
+    description: Return all sessions
+    get:
+      operationId: getPokerSessions
+      tags:
+        - pokerSession
+      parameters:
+        - name: pokerType
+          in: query
+          description:
+          required: false
+          schema:
+            $ref: '#/components/schemas/PokerType'
+      requestBody:
+        content:
+          application/json: {}
+      responses:
+        200:
+          description: Successful request
+          headers:
+            x-next:
+              description: Link a la siguiente página
+              schema:
+                type: string
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokerSessionList'
+
+
+components:
+  schemas: 
+    uuid:
+      description: Identifier based on UUID
+      type: string
+      pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+      # the regex above limits the length;
+      # however, some tools might require explicit settings:
+      minLength: 36
+      maxLength: 36
+    PokerType:
+      description: Type of poker games
+      type: string
+      enum:
+        - texas_holdem
+        - omaha
+        - caribenyo
+        - strip
+        - card_draw
+    PokerSession:
+      description: Session of poker game planned
+      required: 
+        - name
+        - type
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        pokerType:
+          description: Name of type Poker session available to select
+          allOf: 
+            - $ref: '#/components/schemas/PokerType'
+        members:
+          description: Members of poker session available
+          type: array
+          allOf: 
+            - $ref: '#/components/schemas/Member'
+    User:
+      description: User available
+      required:
+        - id
+        - nickname
+      properties: 
+        id:
+          type: string
+          format: uuid
+        nickName:
+          type: string
+        name:
+          type: string
+        age:
+          type: number
+          format: int32
+    Member:
+      required:
+        - id
+        - nickName
+      description: Member of poker session
+      type: object
+      properties: 
+        sessionId:
+          type: array
+          allOf:
+            - $ref: '#/components/schemas/PokerSession'
+        userId:
+          type: array
+          allOf:
+            - $ref: '#/components/schemas/User'
+        
+  

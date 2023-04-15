@@ -1,0 +1,126 @@
+openapi: 3.0.3
+info:
+  title: Poker Challenge API
+  description: API para el desafío de póker.
+  version: 1.0.0
+
+paths:
+  /api/poker-sessions:
+    post:
+      summary: Crea una nueva sesión de póker.
+      operationId: createPokerSession
+      requestBody:
+        content:
+          application/json: {}
+      responses:
+        201:
+          description: Sesión de póker creada con éxito.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokerSession'
+
+  /api/poker-sessions/{sessionId}/members:
+    post:
+      summary: Agrega un miembro a una sesión de póker existente.
+      operationId: addMember
+      parameters:
+        - name: sessionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Member'
+      responses:
+        201:
+          description: Miembro agregado con éxito a la sesión de póker.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Member'
+
+  /api/votes:
+    post:
+      summary: Crea una nueva votación.
+      operationId: createVote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vote'
+      responses:
+        201:
+          description: Votación creada con éxito.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vote'
+
+  /api/votes/session/{sessionId}:
+    get:
+      summary: Obtiene las votaciones de una sesión de póker.
+      operationId: getVotes
+      parameters:
+        - name: sessionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        200:
+          description: Votaciones obtenidas con éxito.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vote'
+
+components:
+  schemas:
+    PokerSession:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        members:
+          type: array
+          items:
+            $ref: '#/components/schemas/Member'
+      required:
+        - id
+        - members
+
+    Member:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+      required:
+        - id
+        - name
+
+    Vote:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        member:
+          $ref: '#/components/schemas/Member'
+        value:
+          type: integer
+      required:
+        - id
+        - member
+        - value
