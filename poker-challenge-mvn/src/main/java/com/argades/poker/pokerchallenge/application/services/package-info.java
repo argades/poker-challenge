@@ -1,1 +1,1 @@
-package com.argades.poker.pokerchallenge.application.service;
+package com.argades.poker.pokerchallenge.application.services;

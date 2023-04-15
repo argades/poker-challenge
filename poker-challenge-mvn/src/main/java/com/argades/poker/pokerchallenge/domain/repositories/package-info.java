@@ -1,1 +1,1 @@
-package com.argades.poker.pokerchallenge.domain.repository;
+package com.argades.poker.pokerchallenge.domain.repositories;
