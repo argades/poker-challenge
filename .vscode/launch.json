@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PokerChallengeApplication<poker-challenge>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.argades.poker.pokerchallenge.PokerChallengeApplication",
+            "projectName": "poker-challenge",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
