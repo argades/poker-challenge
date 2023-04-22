@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.dtos;
+package com.argades.poker.pokerchallenge.shared.dtos;
 
 import java.util.Objects;
 
@@ -19,15 +19,15 @@ import jakarta.validation.constraints.NotNull;
 
 public class Member {
     @JsonProperty("id")
-    private Object id = null;
+    private Integer id = null;
 
     @JsonProperty("nickName")
-    private Object nickName = null;
+    private String nickName = null;
 
     @JsonProperty("age")
-    private Object age = null;
+    private int age;
 
-    public Member id(Object id) {
+    public Member id(Integer id) {
         this.id = id;
         return this;
     }
@@ -39,15 +39,15 @@ public class Member {
      **/
     @Schema(description = "")
 
-    public Object getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public Member nickName(Object nickName) {
+    public Member nickName(String nickName) {
         this.nickName = nickName;
         return this;
     }
@@ -60,15 +60,15 @@ public class Member {
     @Schema(required = true, description = "")
     @NotNull
 
-    public Object getNickName() {
+    public String getNickName() {
         return nickName;
     }
 
-    public void setNickName(Object nickName) {
+    public void setNickName(String nickName) {
         this.nickName = nickName;
     }
 
-    public Member age(Object age) {
+    public Member age(int age) {
         this.age = age;
         return this;
     }
@@ -84,7 +84,7 @@ public class Member {
         return age;
     }
 
-    public void setAge(Object age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

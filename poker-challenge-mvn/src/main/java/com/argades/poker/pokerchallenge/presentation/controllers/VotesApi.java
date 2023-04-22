@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.argades.poker.pokerchallenge.presentation.dtos.Vote;
-import com.argades.poker.pokerchallenge.presentation.dtos.Votes;
+import com.argades.poker.pokerchallenge.shared.dtos.Vote;
+import com.argades.poker.pokerchallenge.shared.dtos.Votes;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

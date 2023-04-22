@@ -1,13 +1,14 @@
-package com.argades.poker.pokerchallenge.presentation.dtos;
+package com.argades.poker.pokerchallenge.shared.dtos;
 
+import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import org.springframework.validation.annotation.Validated;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.annotation.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
@@ -15,22 +16,20 @@ import jakarta.validation.constraints.NotNull;
  */
 @Schema(description = "Session of poker game planned")
 @Validated
-@Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-04-16T16:35:44.158162492Z[GMT]")
-
 public class PokerSession {
     @JsonProperty("id")
-    private Object id = null;
+    private UUID id = null;
 
     @JsonProperty("name")
-    private Object name = null;
+    private String name = null;
 
     @JsonProperty("pokerType")
-    private Object pokerType = null;
+    private PokerType pokerType = null;
 
     @JsonProperty("members")
-    private Object members = null;
+    private List<Member> members = null;
 
-    public PokerSession id(Object id) {
+    public PokerSession id(UUID id) {
         this.id = id;
         return this;
     }
@@ -42,15 +41,15 @@ public class PokerSession {
      **/
     @Schema(description = "")
 
-    public Object getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public PokerSession name(Object name) {
+    public PokerSession name(String name) {
         this.name = name;
         return this;
     }
@@ -63,15 +62,15 @@ public class PokerSession {
     @Schema(required = true, description = "")
     @NotNull
 
-    public Object getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Object name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public PokerSession pokerType(Object pokerType) {
+    public PokerSession pokerType(PokerType pokerType) {
         this.pokerType = pokerType;
         return this;
     }
@@ -83,15 +82,15 @@ public class PokerSession {
      **/
     @Schema(description = "Type Poker session available to select")
 
-    public Object getPokerType() {
+    public PokerType getPokerType() {
         return pokerType;
     }
 
-    public void setPokerType(Object pokerType) {
+    public void setPokerType(PokerType pokerType) {
         this.pokerType = pokerType;
     }
 
-    public PokerSession members(Object members) {
+    public PokerSession members(List<Member> members) {
         this.members = members;
         return this;
     }
@@ -107,7 +106,7 @@ public class PokerSession {
         return members;
     }
 
-    public void setMembers(Object members) {
+    public void setMembers(List<Member> members) {
         this.members = members;
     }
 

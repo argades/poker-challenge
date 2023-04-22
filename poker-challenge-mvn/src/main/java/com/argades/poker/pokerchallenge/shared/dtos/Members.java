@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.dtos;
+package com.argades.poker.pokerchallenge.shared.dtos;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -11,11 +11,11 @@ import jakarta.annotation.Generated;
 /**
  * Members list
  */
-@Schema(description = "PokerSession list")
+@Schema(description = "Members list")
 @Validated
 @Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-04-15T17:20:46.339067375Z[GMT]")
 
-public class PokerSessionList extends ArrayList<PokerSession> {
+public class Members extends ArrayList<Member> {
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -36,7 +36,7 @@ public class PokerSessionList extends ArrayList<PokerSession> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class PokerSessionList {\n");
+        sb.append("class Members {\n");
         sb.append("    ").append(toIndentedString(super.toString())).append("\n");
         sb.append("}");
         return sb.toString();

@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.argades.poker.pokerchallenge.presentation.dtos.Member;
-import com.argades.poker.pokerchallenge.presentation.dtos.PokerSession;
-import com.argades.poker.pokerchallenge.presentation.dtos.PokerSessionList;
-import com.argades.poker.pokerchallenge.presentation.dtos.PokerType;
+import com.argades.poker.pokerchallenge.shared.dtos.Member;
+import com.argades.poker.pokerchallenge.shared.dtos.PokerSession;
+import com.argades.poker.pokerchallenge.shared.dtos.PokerSessionList;
+import com.argades.poker.pokerchallenge.shared.dtos.PokerType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.v3.oas.annotations.Parameter;

@@ -1,33 +1,31 @@
-package com.argades.poker.pokerchallenge.presentation.dtos;
+package com.argades.poker.pokerchallenge.shared.dtos;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.v3.oas.annotations.media.Schema;
+
 import org.springframework.validation.annotation.Validated;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
-import jakarta.annotation.Generated;
-import jakarta.validation.constraints.*;
 
 /**
  * Votes of session
  */
 @Schema(description = "Votes of session")
 @Validated
-@Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-04-16T16:35:44.158162492Z[GMT]")
 
 public class Vote {
     @JsonProperty("id")
-    private Object id = null;
+    private Integer id = null;
 
     @JsonProperty("member")
     private Member member = null;
 
     @JsonProperty("value")
-    private Object value = null;
+    private int value;
 
-    public Vote id(Object id) {
+    public Vote id(Integer id) {
         this.id = id;
         return this;
     }
@@ -39,11 +37,11 @@ public class Vote {
      **/
     @Schema(description = "")
 
-    public Object getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Object id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -68,7 +66,7 @@ public class Vote {
         this.member = member;
     }
 
-    public Vote value(Object value) {
+    public Vote value(int value) {
         this.value = value;
         return this;
     }
@@ -80,11 +78,11 @@ public class Vote {
      **/
     @Schema(description = "")
 
-    public Object getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
+    public void setValue(int value) {
         this.value = value;
     }
 

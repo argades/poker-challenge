@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.dtos;
+package com.argades.poker.pokerchallenge.shared.dtos;
 
 import java.util.ArrayList;
 import java.util.Objects;

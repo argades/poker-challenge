@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.argades.poker.pokerchallenge.presentation.dtos.Vote;
-import com.argades.poker.pokerchallenge.presentation.dtos.Votes;
+import com.argades.poker.pokerchallenge.shared.dtos.Vote;
+import com.argades.poker.pokerchallenge.shared.dtos.Votes;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.v3.oas.annotations.Parameter;
