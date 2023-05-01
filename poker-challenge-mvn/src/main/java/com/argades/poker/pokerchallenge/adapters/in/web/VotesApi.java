@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.controllers;
+package com.argades.poker.pokerchallenge.adapters.in.web;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.argades.poker.pokerchallenge.shared.dtos.Vote;
-import com.argades.poker.pokerchallenge.shared.dtos.Votes;
+import com.argades.poker.pokerchallenge.domain.Vote;
+import com.argades.poker.pokerchallenge.domain.Votes;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

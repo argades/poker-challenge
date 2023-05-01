@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.controllers;
+package com.argades.poker.pokerchallenge.adapters.in.web;
 
 import java.io.IOException;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.argades.poker.pokerchallenge.shared.dtos.Vote;
-import com.argades.poker.pokerchallenge.shared.dtos.Votes;
+import com.argades.poker.pokerchallenge.domain.Vote;
+import com.argades.poker.pokerchallenge.domain.Votes;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.v3.oas.annotations.Parameter;

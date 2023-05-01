@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.domain.entities;
+package com.argades.poker.pokerchallenge.adapters.out.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,7 +20,6 @@ public class MemberEntity {
     @Column(name = "id")
     private Integer id = null;
 
-    @Column(name = "nick_name", nullable = false)
     private String nickName = null;
 
     @Column(name = "age", nullable = true)

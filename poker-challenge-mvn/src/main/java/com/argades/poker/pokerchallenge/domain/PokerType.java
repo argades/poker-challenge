@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.shared.dtos;
+package com.argades.poker.pokerchallenge.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

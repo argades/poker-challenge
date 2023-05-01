@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.controllers;
+package com.argades.poker.pokerchallenge.adapters.in.web;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,20 +13,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.argades.poker.pokerchallenge.shared.dtos.Member;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerSession;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerSessionList;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerType;
+import com.argades.poker.pokerchallenge.domain.Member;
+import com.argades.poker.pokerchallenge.domain.PokerSession;
+import com.argades.poker.pokerchallenge.domain.PokerSessionList;
+import com.argades.poker.pokerchallenge.domain.PokerType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.annotation.Generated;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
-@Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-04-15T17:20:46.339067375Z[GMT]")
 @RestController
 public class PokerSessionsApiController implements PokerSessionsApi {
 
@@ -94,6 +92,8 @@ public class PokerSessionsApiController implements PokerSessionsApi {
 
     public ResponseEntity<PokerSessionList> getPokerSessions(
             @Parameter(in = ParameterIn.QUERY, description = "Type of poker session", schema = @Schema()) @Valid @RequestParam(value = "pokerType", required = false) PokerType pokerType) {
+        System.out.println("com.argades.poker.pokerchallenge.adapters.in.web.PokerSessionsApiController.getPokerSessions()");
+ 
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {

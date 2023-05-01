@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.presentation.controllers;
+package com.argades.poker.pokerchallenge.adapters.in.web;
 
 import java.util.List;
 import java.util.UUID;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.argades.poker.pokerchallenge.shared.dtos.Member;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerSession;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerSessionList;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerType;
+import com.argades.poker.pokerchallenge.domain.Member;
+import com.argades.poker.pokerchallenge.domain.PokerSession;
+import com.argades.poker.pokerchallenge.domain.PokerSessionList;
+import com.argades.poker.pokerchallenge.domain.PokerType;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

@@ -4,8 +4,8 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Stream;
 
-import com.argades.poker.pokerchallenge.domain.entities.MemberEntity;
-import com.argades.poker.pokerchallenge.domain.repositories.MemberRepository;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.entity.MemberEntity;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.repo.MemberRepository;
 
 public class DomainMemberService implements MemberService {
 

@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.shared.dtos;
+package com.argades.poker.pokerchallenge.domain;
 
 import java.util.Objects;
 
@@ -7,25 +7,27 @@ import org.springframework.validation.annotation.Validated;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.Valid;
+import jakarta.annotation.Generated;
+import jakarta.validation.constraints.NotNull;
 
 /**
- * Votes of session
+ * Member of poker session
  */
-@Schema(description = "Votes of session")
+@Schema(description = "Member of poker session")
 @Validated
+@Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-04-16T16:35:44.158162492Z[GMT]")
 
-public class Vote {
+public class Member {
     @JsonProperty("id")
     private Integer id = null;
 
-    @JsonProperty("member")
-    private Member member = null;
+    @JsonProperty("nickName")
+    private String nickName = null;
 
-    @JsonProperty("value")
-    private int value;
+    @JsonProperty("age")
+    private int age;
 
-    public Vote id(Integer id) {
+    public Member id(Integer id) {
         this.id = id;
         return this;
     }
@@ -45,45 +47,45 @@ public class Vote {
         this.id = id;
     }
 
-    public Vote member(Member member) {
-        this.member = member;
+    public Member nickName(String nickName) {
+        this.nickName = nickName;
         return this;
     }
 
     /**
-     * Get member
+     * Get nickName
      * 
-     * @return member
+     * @return nickName
      **/
-    @Schema(description = "")
+    @Schema(required = true, description = "")
+    @NotNull
 
-    @Valid
-    public Member getMember() {
-        return member;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setMember(Member member) {
-        this.member = member;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
-    public Vote value(int value) {
-        this.value = value;
+    public Member age(int age) {
+        this.age = age;
         return this;
     }
 
     /**
-     * Get value
+     * Get age
      * 
-     * @return value
+     * @return age
      **/
     @Schema(description = "")
 
-    public int getValue() {
-        return value;
+    public Object getAge() {
+        return age;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
@@ -94,25 +96,25 @@ public class Vote {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Vote vote = (Vote) o;
-        return Objects.equals(this.id, vote.id) &&
-                Objects.equals(this.member, vote.member) &&
-                Objects.equals(this.value, vote.value);
+        Member member = (Member) o;
+        return Objects.equals(this.id, member.id) &&
+                Objects.equals(this.nickName, member.nickName) &&
+                Objects.equals(this.age, member.age);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, member, value);
+        return Objects.hash(id, nickName, age);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class Vote {\n");
+        sb.append("class Member {\n");
 
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
-        sb.append("    member: ").append(toIndentedString(member)).append("\n");
-        sb.append("    value: ").append(toIndentedString(value)).append("\n");
+        sb.append("    nickName: ").append(toIndentedString(nickName)).append("\n");
+        sb.append("    age: ").append(toIndentedString(age)).append("\n");
         sb.append("}");
         return sb.toString();
     }

@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.argades.poker.pokerchallenge.domain.entities.MemberEntity;
-import com.argades.poker.pokerchallenge.domain.entities.PokerSessionEntity;
-import com.argades.poker.pokerchallenge.domain.repositories.PokerSessionRepository;
-import com.argades.poker.pokerchallenge.shared.dtos.PokerType;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.entity.MemberEntity;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.entity.PokerSessionEntity;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.repo.PokerSessionRepository;
+import com.argades.poker.pokerchallenge.domain.PokerType;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest()

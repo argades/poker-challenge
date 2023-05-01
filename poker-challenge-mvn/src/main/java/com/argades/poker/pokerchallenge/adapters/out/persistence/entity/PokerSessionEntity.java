@@ -1,11 +1,11 @@
-package com.argades.poker.pokerchallenge.domain.entities;
+package com.argades.poker.pokerchallenge.adapters.out.persistence.entity;
 
 import java.util.List;
 import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.argades.poker.pokerchallenge.shared.dtos.PokerType;
+import com.argades.poker.pokerchallenge.domain.PokerType;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

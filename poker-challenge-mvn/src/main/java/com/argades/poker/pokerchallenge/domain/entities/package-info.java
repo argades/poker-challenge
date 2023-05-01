@@ -1,1 +1,0 @@
-package com.argades.poker.pokerchallenge.domain.entities;

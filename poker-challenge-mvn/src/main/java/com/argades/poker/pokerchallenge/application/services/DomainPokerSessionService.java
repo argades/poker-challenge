@@ -4,8 +4,8 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Stream;
 
-import com.argades.poker.pokerchallenge.domain.entities.PokerSessionEntity;
-import com.argades.poker.pokerchallenge.domain.repositories.PokerSessionRepository;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.entity.PokerSessionEntity;
+import com.argades.poker.pokerchallenge.adapters.out.persistence.repo.PokerSessionRepository;
 
 public class DomainPokerSessionService implements PokerSessionService {
     final PokerSessionRepository pokerSessionRepository;

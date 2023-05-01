@@ -1,4 +1,4 @@
-package com.argades.poker.pokerchallenge.shared.dtos;
+package com.argades.poker.pokerchallenge.domain;
 
 import java.util.ArrayList;
 import java.util.Objects;
